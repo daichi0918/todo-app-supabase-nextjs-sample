@@ -12,7 +12,6 @@ const Layout: FC<Title> = ({ children, title = 'Todo app' }) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
       <main className="flex w-screen flex-1 flex-col items-center justify-center">
         {children}
       </main>
