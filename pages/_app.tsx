@@ -59,8 +59,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [])
   return (
     <QueryClientProvider client={queryClient}>
-      {Component ? (Component as unknown as ReactNode) : null}
-      <ReactQueryDevtools initialIsOpen={false} />
+      <>
+        <Component {...pageProps} />
+        <ReactQueryDevtools initialIsOpen={false} />
+      </>
     </QueryClientProvider>
   )
 }
